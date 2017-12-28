@@ -21,4 +21,6 @@ describe('Food', function () {
     assert.strictEqual(food.poisoned, false)
   })
 
+
+
 })
