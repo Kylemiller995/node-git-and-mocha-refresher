@@ -24,5 +24,18 @@ Hero.prototype.eat = function (food) {
   }
 }
 
+Hero.prototype.addQuest = function(quest){
+  this.questLog.push(quest)
+}
+
+Hero.prototype.filterCompleted = function(status){
+  return this.questLog.filter(quest => quest.completed === status)
+}
+
+Hero.prototype.sortQuests = function (sortBy){
+  this.questLog.sort(function(a, b){
+    return b[sortBy] - a[sortBy]
+  })
+}
 
 module.exports = Hero;

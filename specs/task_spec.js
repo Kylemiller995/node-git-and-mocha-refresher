@@ -6,12 +6,14 @@ describe('Tasks', function () {
 	var task;
 
 	beforeEach(function () {
-		task = new Task( "medium", "high", 1000 )
+		task = new Task( 1, 2, 1000 )
 	})
 
   it("should be able to complete task", function(){
     task.complete()
     assert.strictEqual(task.completed, true)
   })
+
+
 
 })
